@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".UploadActivity">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/FirstName"
+        android:background="@drawable/green_border"
+        android:layout_marginTop="20dp"
+        android:hint="Enter First name"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="start|center_vertical"
+        android:padding="16dp"
+        android:textColor="@color/green"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/LastName"
+        android:background="@drawable/green_border"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Last name"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="start|center_vertical"
+        android:padding="16dp"
+        android:textColor="@color/green"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/Email"
+        android:background="@drawable/green_border"
+        android:layout_marginTop="20dp"
+        android:hint="Email"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="start|center_vertical"
+        android:padding="16dp"
+        android:textColor="@color/green"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/PhoneNumber"
+        android:background="@drawable/green_border"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Phone number"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="start|center_vertical"
+        android:padding="16dp"
+        android:textColor="@color/green"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/ResidentialAddress"
+        android:background="@drawable/green_border"
+        android:layout_marginTop="20dp"
+        android:hint="Enter residential address"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="start|center_vertical"
+        android:padding="16dp"
+        android:textColor="@color/green"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/Designation"
+        android:background="@drawable/green_border"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Designation"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="start|center_vertical"
+        android:padding="16dp"
+        android:textColor="@color/green"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/Salary"
+        android:background="@drawable/green_border"
+        android:layout_marginTop="20dp"
+        android:hint="Enter salary"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="start|center_vertical"
+        android:padding="16dp"
+        android:textColor="@color/green"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/EmployeeNumber"
+        android:background="@drawable/green_border"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Employee Number"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="start|center_vertical"
+        android:padding="16dp"
+        android:textColor="@color/green"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/add"
+        android:text="Add"
+        android:backgroundTint="@color/green"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cornerRadius="20dp"/>
+
+
+</LinearLayout>
