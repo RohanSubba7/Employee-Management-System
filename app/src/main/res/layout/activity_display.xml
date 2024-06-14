@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Display">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/searchEmployeeNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:padding="12dp"
+            android:background="@drawable/green_border"
+            android:hint="Enter employee number"
+            android:textSize="20sp"
+            android:textColor="@color/green"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/searchEmployeeNumber"
+            app:layout_constraintEnd_toEndOf="@id/searchEmployeeNumber"
+            app:layout_constraintTop_toBottomOf="@id/searchEmployeeNumber"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@drawable/green_border"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_button">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/firstName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="First Name"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/readFirstName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/green"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_margin="10dp"
+                    android:alpha="0.5"
+                    android:background="@color/green"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/lastName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Last Name"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/readLastName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/green"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_margin="10dp"
+                    android:alpha="0.5"
+                    android:background="@color/green"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Email"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/readEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/green"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_margin="10dp"
+                    android:alpha="0.5"
+                    android:background="@color/green"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/phoneNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Phone Number"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/readPhoneNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/green"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_margin="10dp"
+                    android:alpha="0.5"
+                    android:background="@color/green"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/residentialAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Residential Address"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/readResidentialAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/green"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_margin="10dp"
+                    android:alpha="0.5"
+                    android:background="@color/green"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/designation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Designation"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/readDesignation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/green"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_margin="10dp"
+                    android:alpha="0.5"
+                    android:background="@color/green"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/salary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Salary"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/readSalary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/green"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

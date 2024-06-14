@@ -20,5 +20,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        binding.employeeDetails.setOnClickListener {
+            val intent = Intent (this@MainActivity, Display::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }
