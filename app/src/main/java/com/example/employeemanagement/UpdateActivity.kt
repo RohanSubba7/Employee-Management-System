@@ -2,13 +2,8 @@ package com.example.employeemanagement
 
 import android.content.Intent
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Email
-import android.provider.ContactsContract.CommonDataKinds.SipAddress
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.employeemanagement.databinding.ActivityUpdateBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -23,6 +18,7 @@ class UpdateActivity : AppCompatActivity() {
         binding = ActivityUpdateBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         binding.updateButton.setOnClickListener{
             val referenceEmployeeNumber = binding.referenceEmployeeNumber.text.toString()
             val updateFirstName = binding.updateFirstName.text.toString()
@@ -34,6 +30,15 @@ class UpdateActivity : AppCompatActivity() {
             val updateSalary = binding.updateSalary.text.toString()
 
             updateData(referenceEmployeeNumber, updateFirstName, updateLastName, updateEmail, updatePhoneNumber, updateResidentialAddress, updateDesignation, updateSalary)
+        }
+
+        binding.deleteButton.setOnClickListener{
+            val employeeNumber = binding.referenceEmployeeNumber.text.toString()
+            if (employeeNumber.isNotEmpty()){
+                deleteData(employeeNumber)
+            } else {
+                Toast.makeText(this, "Please enter Employee Number", Toast.LENGTH_SHORT).show()
+            }
         }
 
         binding.backButton.setOnClickListener{
@@ -61,6 +66,17 @@ class UpdateActivity : AppCompatActivity() {
 
         }.addOnFailureListener{
             Toast.makeText(this, "Unable to update", Toast.LENGTH_SHORT).show()
+        }
+
+    }
+
+    private fun deleteData(employeeNumber: String){
+        databaseReference = FirebaseDatabase.getInstance().getReference("Employee Information")
+        databaseReference.child(employeeNumber).removeValue().addOnSuccessListener {
+            binding.referenceEmployeeNumber.text.clear()
+            Toast.makeText(this, "Deleted", Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener{
+            Toast.makeText(this, "Unable to Delete", Toast.LENGTH_SHORT).show()
         }
 
     }
