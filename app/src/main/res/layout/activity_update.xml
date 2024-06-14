@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    tools:context=".UpdateActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:padding="20dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/referenceEmployeeNumber"
+                android:background="@drawable/green_border"
+                android:hint="Enter Employee number"
+                android:padding="16dp"
+                android:textColor="@color/green"
+                android:gravity="start|center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/updateFirstName"
+                android:background="@drawable/green_border"
+                android:hint="Enter First Name"
+                android:padding="16dp"
+                android:textColor="@color/green"
+                android:gravity="start|center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/updateLastName"
+                android:background="@drawable/green_border"
+                android:hint="Enter last Name"
+                android:padding="16dp"
+                android:textColor="@color/green"
+                android:gravity="start|center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/updateEmail"
+                android:background="@drawable/green_border"
+                android:hint="Enter Email"
+                android:padding="16dp"
+                android:textColor="@color/green"
+                android:gravity="start|center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/updatePhoneNumber"
+                android:background="@drawable/green_border"
+                android:hint="Enter Phone Number"
+                android:padding="16dp"
+                android:textColor="@color/green"
+                android:gravity="start|center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/updateResidentialAddress"
+                android:background="@drawable/green_border"
+                android:hint="Enter residential address"
+                android:padding="16dp"
+                android:textColor="@color/green"
+                android:gravity="start|center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/updateDesignation"
+                android:background="@drawable/green_border"
+                android:hint="Enter Designation"
+                android:padding="16dp"
+                android:textColor="@color/green"
+                android:gravity="start|center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/updateSalary"
+                android:background="@drawable/green_border"
+                android:hint="Enter Salary"
+                android:padding="16dp"
+                android:textColor="@color/green"
+                android:gravity="start|center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/updateButton"
+                android:text="Update"
+                android:backgroundTint="@color/green"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/backButton"
+                android:text="Back"
+                android:backgroundTint="@color/green"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

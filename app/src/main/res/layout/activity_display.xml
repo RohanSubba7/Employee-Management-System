@@ -322,7 +322,20 @@
                         android:textColor="@color/green"
                         android:textSize="18sp"/>
 
+
+
                 </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/backButton"
+                    android:text="Back"
+                    android:backgroundTint="@color/green"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp" />
             </LinearLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

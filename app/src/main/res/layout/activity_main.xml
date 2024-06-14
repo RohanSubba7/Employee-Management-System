@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="100dp"
         android:layout_gravity="center_horizontal"
         android:padding="20dp">
 
@@ -30,6 +30,17 @@
             android:layout_height="80dp"
             android:text="Upload"
             android:id="@+id/mainUpload"
+            android:textSize="18sp"
+            android:backgroundTint="@color/green"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Update"
+            android:id="@+id/mainUpdate"
             android:textSize="18sp"
             android:backgroundTint="@color/green"
             android:layout_marginTop="20dp"

@@ -1,5 +1,6 @@
 package com.example.employeemanagement
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -30,6 +31,12 @@ class Display : AppCompatActivity() {
             } else{
                 Toast.makeText(this, "Please enter the employee number", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        binding.backButton.setOnClickListener{
+            val intent = Intent (this@Display, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 
