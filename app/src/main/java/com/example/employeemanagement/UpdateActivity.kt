@@ -62,6 +62,9 @@ class UpdateActivity : AppCompatActivity() {
             binding.updateDesignation.text.clear()
             binding.updateSalary.text.clear()
             Toast.makeText(this, "updated", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this@UpdateActivity, MainActivity::class.java)
+            startActivity(intent)
+            finish()
 
 
         }.addOnFailureListener{
@@ -75,6 +78,9 @@ class UpdateActivity : AppCompatActivity() {
         databaseReference.child(employeeNumber).removeValue().addOnSuccessListener {
             binding.referenceEmployeeNumber.text.clear()
             Toast.makeText(this, "Deleted", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this@UpdateActivity, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }.addOnFailureListener{
             Toast.makeText(this, "Unable to Delete", Toast.LENGTH_SHORT).show()
         }

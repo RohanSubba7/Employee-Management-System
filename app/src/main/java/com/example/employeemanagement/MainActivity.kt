@@ -66,6 +66,13 @@ class MainActivity : AppCompatActivity() {
                         lastNameTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18f)
                         row.addView(lastNameTextView)
 
+                        val initialsTextView = TextView(this@MainActivity)
+                        val initials = generateInitials(employee.firstName, employee.lastName)
+                        initialsTextView.text = initials
+                        initialsTextView.setPadding(20, 10, 20, 10)
+                        initialsTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18f)
+                        row.addView(initialsTextView)
+
                         tableLayout.addView(row)
 
 
@@ -101,5 +108,33 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+
+    }
+
+    private fun addInitialsToExistingRecords() {
+        val databaseReference = FirebaseDatabase.getInstance().reference.child("Employee Information")
+
+        databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (snapshot in dataSnapshot.children) {
+                    val employee = snapshot.getValue(EmployeeData::class.java)
+                    if (employee != null) {
+                        val initials = generateInitials(employee.firstName, employee.lastName)
+                        snapshot.ref.child("initials").setValue(initials)
+                    }
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                Toast.makeText(this@MainActivity, "Failed to update data.", Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+
+    private fun generateInitials(firstName: String?, lastName: String?): String {
+        val firstInitial = firstName?.firstOrNull()?.toUpperCase() ?: ""
+        val lastInitial = lastName?.firstOrNull()?.toUpperCase() ?: ""
+        return "$firstInitial$lastInitial"
     }
 }
