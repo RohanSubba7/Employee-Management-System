@@ -36,7 +36,7 @@ class UploadActivity : AppCompatActivity() {
 
             databaseReference = FirebaseDatabase.getInstance().getReference("Employee Information")
 
-            val employeeData = EmployeeData(firstName, lastName, email, phoneNumber, residentialAddress, designation, salary)
+            val employeeData = EmployeeData(firstName, lastName, email, phoneNumber, residentialAddress, designation, salary, employeeNumber = employeenumber)
             //inside employee number all the other data will be stored since employee number is always unique
             databaseReference.child(employeenumber).setValue(employeeData).addOnSuccessListener {
                 binding.FirstName.text.clear()

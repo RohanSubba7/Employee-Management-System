@@ -10,9 +10,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:layout_gravity="center_horizontal"
         android:padding="20dp">
+
+        <TextView
+            android:id="@+id/listOfEmployee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="List of Employees with First name and last name "
+            android:textStyle="bold"
+            android:textColor="@color/green"
+            android:textSize="18sp"/>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -53,7 +63,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="Update"
+            android:text="Update / Delete"
             android:id="@+id/mainUpdate"
             android:textSize="18sp"
             android:backgroundTint="@color/green"

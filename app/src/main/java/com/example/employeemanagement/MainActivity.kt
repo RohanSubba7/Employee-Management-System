@@ -48,6 +48,12 @@ class MainActivity : AppCompatActivity() {
                         params.setMargins(0,0,0,10)
                         row.layoutParams = params
 
+                        val employeeNumberTextView = TextView(this@MainActivity)
+                        employeeNumberTextView.text = employee.employeeNumber
+                        employeeNumberTextView.setPadding(20,10,20,10)
+                        employeeNumberTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18f)
+                        row.addView(employeeNumberTextView)
+
                         val firstNameTextView = TextView(this@MainActivity)
                         firstNameTextView.text = employee.firstName
                         firstNameTextView.setPadding(20,10,20,10)
